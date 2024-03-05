@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.webp">
+    <style>
+        .container {
+            display: flex;
+            background-color: rgba(51, 51, 51, 0.075);
+            border-radius: 1.5vw;
+            backdrop-filter: blur(1vw);
+            border: 0.3vw solid  #2a2a2a2c;
+        }
+        body {
+            background-image: url(fundo-abstrato-azul-01_1150x500.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family: monospace;
+            font-size: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        body::-webkit-scrollbar {
+            width: 12px;              
+        }
+        body::-webkit-scrollbar-track {
+            background: #425169;       
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: gray;   
+            border-radius: 20px;      
+            border: 3px solid rgb(71, 71, 71); 
+        }
+
+        input{
+            background-color: #1f355c8c;
+            color: white;
+            text-align: center;
+            width: 15vw;
+            height: 3.8vh;
+            font-size: 2vw;
+            border-radius: 0.5vw;
+            transition: 0.6s;
+            font-size: 1vw;
+        }
+
+        input:hover {
+            transform: scale(1.2);
+        }
+
+
+        #bot1 {
+            width: 13vw;
+            height: 5vh;
+            font-size: 1.7vw;
+        }
+        #bot2 {
+            width: 13vw;
+            height: 5vh;
+            font-size: 1.7vw;
+        }
+
+        option {
+            background-color: #304770;
+            color: white;
+            text-align: center;
+            width: 15vw;
+            height: 6vh;
+            font-size: 2vw;
+        }
+
+        select {
+            background-color: #1f355c8c;
+            color: white;
+            text-align: center;
+            width: 15vw;
+            height: 6vh;
+            font-size: 2vw;
+            border-radius: 0.5vw;
+            border: #50617e inset 0.3vw;
+        }
+        .margin {
+            margin-top: 1vw;
+        }
+        .margin2 {
+            margin-top: 0vw;
+        }
+        .item1 {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        .item2 {
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        .peq {
+            font-size: 1.62vw;
+        }
+    </style>
+    <title>praticando 1 aula 2</title>
+</head>
+<body>  
+            <form action="submit.html"></form>
+            <div class="container">
+                <div class="item1">
+                <div class="margin">
+                    <label for="nome">Nome:</label>
+                    <br>
+                    <input type="text" value="orestes" required>
+                </div>
+                <div class="margin">
+                    <br>
+                    <label for="email">Email:</label>
+                    <br>
+                        <input type="email" required placeholder="example@email.com">
+                    </div>
+                <div class="margin">
+                    <br>
+                    <label for="telefone">Telefone:</label>
+                    <br>    
+                    <input type="tel" required pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" 
+                    placeholder="(xx)xxxxxxx">
+                    <br>
+                </div>
+                <div class="margin">
+                    <label for="url">URL:</label>
+                    <br>
+                    <input type="url" required placeholder="http://www.exemplo.com">
+                    <br>
+                </div>
+                <div class="margin">
+                    <label for="nota">Nota de 0 a 10</label>
+                    <br>    
+                    <input type="number" min="0" max="10" required placeholder="nota X">
+                    <br>
+                </div>
+                    <div class="margin">
+                </div>
+                <div class="margin">
+                    <label for="senha">Senha:</label>
+                    <br>
+                    <input type="password" required >
+                    <br> 
+                    <input type="submit" value="submit" id="bot1">
+                </div>
+                </div>
+                <div class="item2">
+                <div class="margin">
+                    <label for="data">data</label>
+                    <br>   
+                    <input type="date" required>
+                    <br>
+                </div>
+                <div class="margin2">
+                    <label for="cidade">Cidade</label>
+                    <br>
+                    <select name="cidade" id="cidade">
+                    <option value="selecionar">selecione uma cidade:</option>
+                    <option value="magda">magda</option>  
+                    <option value="votuporanga">votuporanga</option>  
+                    <option value="valentim gentil">valentim gentil</option>  
+                    <option value="parisi">parisi</option>  
+                    <option value="alvares florence">alvares florence</option>  
+                    <option value="floreal">floreal</option>  
+                </select>
+                <br>
+                </div>
+                <div class="margin2">
+                    <label for="cep">CEP</label>
+                    <br>
+                    <input type="number" required pattern="\d{2}\.\d{3}-\d{3}"
+                    placeholder="xx.xxx-xxxx">
+                </div>
+                <div class="margin2">
+                    <br>
+                    <label for="endereco">endereço</label>
+                    <br>
+                    <input type="text" required
+                    placeholder="rua/bairro/nº">
+                </div>
+                <div class="margin2">
+                    <br>
+                    <label for="cpf">CPF</label>
+                    <br>
+                    <input type="text" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    placeholder="XXXXXXXXX">
+                </div>
+                <div class="margin2">
+                    <div class="peq">
+                        <br>
+                    <label for="foto de perfil">foto de perfil</label>
+                    <br>
+                    <input type="file" accept="image/*" required>
+                </div>
+                <div class="margin2">
+                    
+                    <label for="contrato assinado">contrato assinado</label>
+                    <br>
+                    <input type="file" required>
+                    </div>
+                </div>
+                    
+                
+                <div class="margin2">
+                    <input type="reset" value="reset" id="bot2">
+                </div>
+            </div>
+            
+        </div>
+        </form><!--formulario-->
+</body>
+</html>
